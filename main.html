@@ -109,7 +109,7 @@
                 <h1>You maybe like</h1>
             </hgroup>
         <section class="sec3">
-            <div class="scroll-container">
+            <div class="scroll_container">
                 <div class="blocks3">
                     <img class="img-sec3" src="img de series/the walking dead.jpg" alt="">
                 </div>
@@ -139,5 +139,14 @@
                 </div>
             </div>
         </section>
+<!--rolagem horizontal da div da sec3-->
+        <script>
+            const scroll_container = document.querySelector('.scroll_container');
+        
+            scroll_container.addEventListener('wheel', (event) => {
+              event.preventDefault(); // Previne a rolagem vertical padrão. Impede que a rolagem do resto da pagina quando usar o mousewheel para cima
+              scroll_container.scrollLeft += event.deltaY; // Rola na horizontal
+            });
+          </script>
     </body>
 </html>

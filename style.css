@@ -9,6 +9,22 @@
 body {
     background-color: #3e1a13;
 }
+/*barra de rolagem da pagina*/
+
+/*O -webkit- é um prefixo utilizado para aplicar estilos específicos a navegadores baseados no motor WebKit,
+ como o Google Chrome, Safari, e alguns outros navegadores mais antigos. Esse prefixo é uma forma de aplicar
+  propriedades CSS que, na época em que foram criadas, só eram suportadas por navegadores que utilizavam 
+  o WebKit como motor de renderização.*/
+::-webkit-scrollbar{
+   width: 8px;
+ 
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(91, 91, 91);
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(59, 46, 46);
+}
 
 hgroup {
     margin-top: 30px;
@@ -158,19 +174,20 @@ li:hover {
     border-radius: 20px 20px 0px 0px;
 }
 
-.sec3 {
+.scroll_container {
     display: flex;
     align-items: center;
     height: 280px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap; /*Impede que os elementos quebram a linha*/
 }
 
 .blocks3 {
     display: inline-block;
     margin: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .img-sec3 {
